@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - TechNova</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form onsubmit="event.preventDefault(); iniciarSesion(correo.value, contrasena.value);">
+        <input type="email" id="correo" placeholder="Correo" required><br>
+        <input type="password" id="contrasena" placeholder="Contraseña" required><br>
+        <button type="submit">Ingresar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+
+    <script src="usuarios.js"></script>
+</body>
+</html>

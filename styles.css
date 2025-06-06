@@ -1,0 +1,435 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor del logo y título */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste del logo */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Botón del carrito */
+#verCarrito {
+    background-color: white;
+    border: 2px solid #007bff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#verCarrito:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sección de productos */
+#productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px;
+}
+
+/* Estilos de cada producto */
+.producto {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Botón de compra */
+.producto button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.producto button:hover {
+    background-color: #218838;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los elementos del carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Botón de eliminar */
+.eliminar-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para los botones de pago */
+.boton-pago {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.boton-pago:hover {
+    background-color: #b52b27;
+}
+/* Estilo original */
+#verCarrito {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: static;
+    transition: all 0.3s ease;
+}
+
+/* Estilo cuando está en modo flotante */
+#verCarrito.flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Burbujita del contador (opcional pero cool) */
+#verCarrito.flotante span {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+#verCarrito {
+    background-color: #6f42c1; /* morado */
+    color: white;
+    /* ... el resto como ya está ... */
+}
+
+#verCarrito.flotante {
+    background-color: #6f42c1; /* mantiene el color cuando flota */
+    color: white;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#loginBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#loginBtn:hover {
+    background-color: #0056b3;
+}
+/* Navbar */
+.navbar {
+  background-color: #1a1a1a;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.navbar button:hover {
+  background-color: #0056b3;
+}
+
+.categorias-modernas {
+  padding: 30px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.categorias-modernas h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.categoria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.categoria-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #343a40;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoria-card span {
+  margin-top: 10px;
+}
+
+.categoria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+}
+
+
+.carrusel-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.producto {
+  min-width: 180px;
+  margin-right: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.producto img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.footer-redes {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-redes h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.redes-sociales img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
+
+/* Botón para agregar producto */
+.btn-Iniciar-Seccion {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-Iniciar-Seccion:hover {
+    background-color: #218838;
+}
+
+/* Página Agregar Producto */
+.form-Iniciar-Seccion {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-Iniciar-Seccion label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-Iniciar-Seccion input,
+.form-Iniciar-Seccion textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-Iniciar-Seccion button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-Iniciar-Seccion button:hover {
+    background-color: #0056b3;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-volver:hover {
+    background-color: #5a6268;
+}

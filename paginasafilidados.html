@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="mult/TechNova_Logo.jpg" alt="TechNova Logo" class="logo">
+            <h1>TechNova - Tienda Tecnológica</h1>
+        </div>
+        <a href="login.html" class="btn-Iniciar-Seccion"> Iniciar Seccion  </a>
+        <div class="header-buttons">
+            <div class="header-buttons">
+            <button id="verCarrito">
+    🛒 Ver Carrito (<span id="contadorCarrito">0</span>)
+</button>
+
+        </div>
+    </header>
+    <!-- Barra de navegación -->
+<nav class="navbar">
+  <button onclick="mostrarProductos()">Ver Productos</button>
+</nav>
+
+<div class="carrusel-container">
+  <div class="carrusel">
+    <div class="producto">
+      <img src="mult/mouse-gamer.jpg" alt="Producto 1">
+      <h4>Mouse Gamer</h4>
+    </div>
+    <div class="producto">
+      <img src="mult/Combo-Gamer.jpg" alt="Producto 2">
+      <h4>Combo Gamer</h4>
+    </div>
+    <div class="producto">
+      <img src="mult/audicularesGamer.jpg" alt="Producto 3">
+      <h4>Audiculares Gamer</h4>
+    </div>
+     <div class="producto">
+      <img src="mult/mouse-genius.jpg" alt="Producto 4">
+      <h4>Mouse Genius</h4>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="categorias-modernas">
+  <h2>Categorías</h2>
+  <div class="categoria-grid">
+    <a href="categoria.html?nombre=Computadoras" class="categoria-card">
+      💻 <span>Computadoras</span>
+    </a>
+    <a href="categoria.html?nombre=Smartphones" class="categoria-card">
+      📱 <span>Smartphones</span>
+    </a>
+    <a href="categoria.html?nombre=Accesorios" class="categoria-card">
+      🎧 <span>Accesorios</span>
+    </a>
+    <a href="categoria.html?nombre=Redes y conectividad" class="categoria-card">
+      🌐 <span>Redes y conectividad</span>
+    </a>
+    <a href="categoria.html?nombre=Almacenamiento" class="categoria-card">
+      💾 <span>Almacenamiento</span>
+    </a>
+    <a href="categoria.html?nombre=Gaming" class="categoria-card">
+      🎮 <span>Gaming</span>
+    </a>
+  </div>
+</section>
+
+
+    <main>
+        <section id="productos">
+            <!-- Los productos se agregarán dinámicamente desde script.js -->
+        </section>
+    </main>
+
+    <div id="modalCarrito" class="modal">
+        <div class="modal-contenido">
+            <h2>Carrito de Compras</h2>
+            <ul id="listaCarrito"></ul>
+            <h3>Total: $<span id="totalCarrito">0.00</span></h3>
+            <button id="pagar">Pagar</button>
+            <button onclick="cerrarCarrito()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal de información del cliente con opciones de pago -->
+    <div id="modalDatosCliente" class="modal">
+        <div class="modal-contenido">
+            <h2>Ingresa tus datos</h2>
+            <form id="formCliente">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" required>
+
+                <h3>Selecciona tu método de pago:</h3>
+                <label>
+                    <input type="radio" name="pago" value="tarjeta" required> Tarjeta de Crédito
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="paypal" required> PayPal
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="transferencia" required> Transferencia Bancaria
+                </label><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <button onclick="cerrarDatosCliente()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <footer class="footer-redes">
+      <h3>Síguenos en nuestras redes</h3>
+      <div class="redes-sociales">
+          <a href="https://www.facebook.com/profile.php?id=61576661203254" target="_blank" title="Facebook">
+              <img src="mult/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/unra_ndom18/" target="_blank" title="Instagram">
+              <img src="mult/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a href="https://twitter.com" target="_blank" title="Twitter">
+              <img src="mult/twitter-icon.png" alt="Twitter" />
+          </a>
+      </div>
+  </footer>
+  
+  
+</body>
+</html>
+
